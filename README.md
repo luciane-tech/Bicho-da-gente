@@ -22,6 +22,8 @@ Todos os pontos a ajustar estão marcados com `<!-- EDITAR -->` no HTML.
 - [ ] **CRMV:** nome e número do(a) responsável técnico(a) (hero, “Sobre” e rodapé) — somente após confirmação
 - [ ] **Horários:** confirmar abertura, sábado e domingo (o Google informa só “fecha 18h15”). Atualizar também o bloco JSON-LD no `<head>`
 - [ ] **Plantão:** confirmar o número (55) 99118-5665 (tirado de um post do Instagram)
+- [ ] **Instagram:** salvar as melhores fotos do @bichosdagenteijui (com autorização) em `assets/img/`
+- [ ] **Mapa:** opcional — trocar a ilustração `mapa.svg` por um print real do Google Maps (`mapa.jpg`)
 - [ ] **Domínio:** ajustar `canonical` e URLs do JSON-LD
 - [ ] **Google:** depois de publicado, adicionar o link do site no Perfil da Empresa (Perfil → Editar perfil → Contato → Site)
 

@@ -217,8 +217,10 @@ p { margin: 0 0 1em; }
 .contact li { display: flex; gap: 12px; align-items: flex-start; }
 .contact li > span { font-size: 1.3rem; }
 .contact strong { display: block; font-size: .85rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
-.map { border-radius: 14px; overflow: hidden; margin-bottom: 14px; aspect-ratio: 16 / 9; background: var(--teal-soft); }
-.map iframe { width: 100%; height: 100%; border: 0; }
+.map { position: relative; display: block; border-radius: 14px; overflow: hidden; margin-bottom: 14px; aspect-ratio: 16 / 9; background: var(--teal-soft); border: 1px solid var(--line); }
+.map img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.map:hover img { transform: scale(1.04); }
+.map__btn { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); white-space: nowrap; background: #fff; color: var(--teal-dark); font-weight: 800; font-size: .92rem; padding: .55em 1.1em; border-radius: 999px; box-shadow: var(--shadow); }
 
 /* ---------- CTA final ---------- */
 .final { background: var(--teal); color: #fff; padding: 72px 0; text-align: center; }
@@ -592,10 +594,11 @@ p { margin: 0 0 1em; }
             <li><span>📞</span><div><strong>Telefone</strong><a href="tel:+5555991787275">(55) 99178-7275</a></div></li>
             <li><span>📸</span><div><strong>Instagram</strong><a href="https://www.instagram.com/bichosdagenteijui" target="_blank" rel="noopener">@bichosdagenteijui</a></div></li>
           </ul>
-          <div class="map">
-            <iframe title="Mapa: Bichos da Gente, R. 20 de Setembro, 167 - Centro, Ijuí" src="https://maps.google.com/maps?q=R.%2020%20de%20Setembro%2C%20167%20-%20Centro%2C%20Iju%C3%AD%20-%20RS&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <a class="btn btn--ghost btn--block" href="https://share.google/rm68JklPEhJQ6bpwt" target="_blank" rel="noopener">🧭 Como chegar (Google Maps)</a>
+          <a class="map" href="https://share.google/rm68JklPEhJQ6bpwt" target="_blank" rel="noopener" aria-label="Abrir a localização da Bichos da Gente no Google Maps">
+            <!-- EDITAR: para usar um print real do Google Maps, salve em assets/img/mapa.jpg e troque o src abaixo -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgMzYwIj4KICA8IS0tIE1hcGEgaWx1c3RyYWRvIChwcm92aXPDs3JpbykuIFBhcmEgdXNhciB1bSBwcmludCByZWFsIGRvIEdvb2dsZSBNYXBzLCBzYWx2ZSBjb21vIGFzc2V0cy9pbWcvbWFwYS5qcGcgZSB0cm9xdWUgbyBzcmMgbm8gaW5kZXguaHRtbCAtLT4KICA8cmVjdCB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM2MCIgZmlsbD0iI2VlZjNlZSIvPgogIDxnIGZpbGw9IiNkZmU5ZGYiPgogICAgPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjkwIiByeD0iNiIvPjxyZWN0IHg9IjIwMCIgeT0iMjAiIHdpZHRoPSIxNzAiIGhlaWdodD0iOTAiIHJ4PSI2Ii8+CiAgICA8cmVjdCB4PSI0MDAiIHk9IjIwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjkwIiByeD0iNiIvPjxyZWN0IHg9IjIwIiB5PSIxNTAiIHdpZHRoPSIxNTAiIGhlaWdodD0iODAiIHJ4PSI2Ii8+CiAgICA8cmVjdCB4PSI0MDAiIHk9IjE1MCIgd2lkdGg9IjIyMCIgaGVpZ2h0PSI4MCIgcng9IjYiLz48cmVjdCB4PSIyMCIgeT0iMjcwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjcwIiByeD0iNiIvPgogICAgPHJlY3QgeD0iMjAwIiB5PSIyNzAiIHdpZHRoPSIxNzAiIGhlaWdodD0iNzAiIHJ4PSI2Ii8+PHJlY3QgeD0iNDAwIiB5PSIyNzAiIHdpZHRoPSIyMjAiIGhlaWdodD0iNzAiIHJ4PSI2Ii8+CiAgPC9nPgogIDxyZWN0IHg9IjIwMCIgeT0iMTUwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjgwIiByeD0iNiIgZmlsbD0iI2NmZThkMyIvPgogIDxjaXJjbGUgY3g9IjI0MCIgY3k9IjE5MCIgcj0iMTAiIGZpbGw9IiNiNWRiYmIiLz48Y2lyY2xlIGN4PSIyNzAiIGN5PSIxNzgiIHI9IjgiIGZpbGw9IiNiNWRiYmIiLz4KICA8ZyBmaWxsPSIjZmZmIiBzdHJva2U9IiNkNWRkZDUiIHN0cm9rZS13aWR0aD0iMSI+CiAgICA8cmVjdCB4PSIwIiB5PSIxMTgiIHdpZHRoPSI2NDAiIGhlaWdodD0iMjYiLz4KICAgIDxyZWN0IHg9IjAiIHk9IjIzOCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIyNiIvPgogICAgPHJlY3QgeD0iMTc2IiB5PSIwIiB3aWR0aD0iMTgiIGhlaWdodD0iMzYwIi8+CiAgICA8cmVjdCB4PSIzNzYiIHk9IjAiIHdpZHRoPSIxOCIgaGVpZ2h0PSIzNjAiLz4KICA8L2c+CiAgPHJlY3QgeD0iMCIgeT0iMTE4IiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjI2IiBmaWxsPSIjZmZlOWM3IiBzdHJva2U9IiNmMWNmOTgiLz4KICA8dGV4dCB4PSI0NzAiIHk9IjEzNiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjOGE2YTM1IiBmb250LXdlaWdodD0iNzAwIj5SLiAyMCBkZSBTZXRlbWJybzwvdGV4dD4KICA8dGV4dCB4PSIyMiIgeT0iMjU2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM3ZDhhN2QiPkNlbnRybyDCtyBJanXDrSAtIFJTPC90ZXh0PgogIDxlbGxpcHNlIGN4PSIzMDAiIGN5PSIxMzQiIHJ4PSIxNiIgcnk9IjUiIGZpbGw9InJnYmEoMCwwLDAsLjE4KSIvPgogIDxwYXRoIGQ9Ik0zMDAgMTM0Yy0xOC0yMi0yOC0zNi0yOC01MGEyOCAyOCAwIDAgMSA1NiAwYzAgMTQtMTAgMjgtMjggNTB6IiBmaWxsPSIjZTg3NDNiIi8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iODQiIHI9IjE3IiBmaWxsPSIjZmZmIi8+CiAgPGcgZmlsbD0iIzJmOWM4YSI+CiAgICA8ZWxsaXBzZSBjeD0iMzAwIiBjeT0iODkiIHJ4PSI2IiByeT0iNSIvPjxlbGxpcHNlIGN4PSIyOTIiIGN5PSI4MiIgcng9IjIuNiIgcnk9IjMuMyIvPgogICAgPGVsbGlwc2UgY3g9IjMwOCIgY3k9IjgyIiByeD0iMi42IiByeT0iMy4zIi8+PGVsbGlwc2UgY3g9IjI5NiIgY3k9Ijc3IiByeD0iMi40IiByeT0iMyIvPjxlbGxpcHNlIGN4PSIzMDQiIGN5PSI3NyIgcng9IjIuNCIgcnk9IjMiLz4KICA8L2c+CiAgPHJlY3QgeD0iMjIyIiB5PSIyMCIgd2lkdGg9IjE1NiIgaGVpZ2h0PSIzMCIgcng9IjE1IiBmaWxsPSIjZmZmIiBzdHJva2U9IiNlM2VjZTkiLz4KICA8dGV4dCB4PSIzMDAiIHk9IjQwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxZjc0NjYiPkJpY2hvcyBkYSBHZW50ZTwvdGV4dD4KPC9zdmc+Cg==" alt="Mapa com a localização da Bichos da Gente na R. 20 de Setembro, Centro de Ijuí" loading="lazy">
+            <span class="map__btn">📍 Abrir no Google Maps</span>
+          </a>
         </div>
       </div>
     </section>
