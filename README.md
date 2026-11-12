@@ -13,7 +13,8 @@ Todos os pontos a ajustar estão marcados com `<!-- EDITAR -->` no HTML.
 ## Checklist antes de publicar
 - [ ] **Avaliações:** copiar 3 depoimentos reais do Google (com autorização) para a seção `#avaliacoes`
 - [ ] **Fotos:** salvar em `assets/img/` com estes nomes (as áreas listradas somem sozinhas quando a foto existe):
-  - `hero.jpg` — hoje é o gatinho do Perfil do Google (baixa resolução); ideal: veterinário(a) com um pet (vertical, 4:5)
+  - `hero.jpg` — banner do topo (cachorro e gato, quadrada 1:1). Confirmar direito de uso da imagem
+  - `foto-5.jpg` — gatinho do Perfil do Google (baixa resolução)
   - `foto-3.jpg` — hoje é a foto do pet shop do Perfil do Google (baixa resolução)
   - `veterinario.jpg` — retrato do(a) responsável (vertical, 4:5)
   - `foto-1.jpg` a `foto-6.jpg` — fachada, consultório, pet shop, banho e tosa, paciente, equipe
