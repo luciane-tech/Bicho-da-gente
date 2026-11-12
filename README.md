@@ -14,7 +14,7 @@ Todos os pontos a ajustar estão marcados com `<!-- EDITAR -->` no HTML.
 - [ ] **Avaliações:** copiar 3 depoimentos reais do Google (com autorização) para a seção `#avaliacoes`
 - [ ] **Fotos:** hoje o site usa fotos ilustrativas do Unsplash (licença gratuita para uso comercial) + 2 fotos do Perfil do Google (`foto-3.jpg` pet shop, `foto-5.jpg` gatinho). Para versão final, trocar por fotos reais mantendo os mesmos nomes em `assets/img/`:
   - `hero.jpg` — banner (cachorro e gato com fundo #2F9C8A). Confirmar direito de uso da imagem enviada
-  - `veterinario.jpg` — retrato do(a) responsável (4:5)
+  - `veterinario.jpg` — veterinária com filhote de golden (imagem enviada pela Life Creative; confirmar direito de uso)
   - `foto-1.jpg` a `foto-6.jpg` — galeria
   - `og-image.jpg` — 1200×630, gerada a partir do banner
 - [ ] **Logo oficial:** substituir `assets/img/logo.svg` (hoje é uma pata provisória)
