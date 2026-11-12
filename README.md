@@ -12,13 +12,11 @@ Todos os pontos a ajustar estão marcados com `<!-- EDITAR -->` no HTML.
 
 ## Checklist antes de publicar
 - [ ] **Avaliações:** copiar 3 depoimentos reais do Google (com autorização) para a seção `#avaliacoes`
-- [ ] **Fotos:** salvar em `assets/img/` com estes nomes (as áreas listradas somem sozinhas quando a foto existe):
-  - `hero.jpg` — banner do topo (cachorro e gato, quadrada 1:1). Confirmar direito de uso da imagem
-  - `foto-5.jpg` — gatinho do Perfil do Google (baixa resolução)
-  - `foto-3.jpg` — hoje é a foto do pet shop do Perfil do Google (baixa resolução)
-  - `veterinario.jpg` — retrato do(a) responsável (vertical, 4:5)
-  - `foto-1.jpg` a `foto-6.jpg` — fachada, consultório, pet shop, banho e tosa, paciente, equipe
-  - `og-image.jpg` — 1200×630, imagem que aparece ao compartilhar o link
+- [ ] **Fotos:** hoje o site usa fotos ilustrativas do Unsplash (licença gratuita para uso comercial) + 2 fotos do Perfil do Google (`foto-3.jpg` pet shop, `foto-5.jpg` gatinho). Para versão final, trocar por fotos reais mantendo os mesmos nomes em `assets/img/`:
+  - `hero.jpg` — banner (cachorro e gato com fundo #2F9C8A). Confirmar direito de uso da imagem enviada
+  - `veterinario.jpg` — retrato do(a) responsável (4:5)
+  - `foto-1.jpg` a `foto-6.jpg` — galeria
+  - `og-image.jpg` — 1200×630, gerada a partir do banner
 - [ ] **Logo oficial:** substituir `assets/img/logo.svg` (hoje é uma pata provisória)
 - [ ] **CRMV:** nome e número do(a) responsável técnico(a) (hero, “Sobre” e rodapé) — somente após confirmação
 - [ ] **Horários:** confirmar abertura, sábado e domingo (o Google informa só “fecha 18h15”). Atualizar também o bloco JSON-LD no `<head>`
@@ -27,6 +25,11 @@ Todos os pontos a ajustar estão marcados com `<!-- EDITAR -->` no HTML.
 - [ ] **Mapa:** opcional — trocar a ilustração `mapa.svg` por um print real do Google Maps (`mapa.jpg`)
 - [ ] **Domínio:** ajustar `canonical` e URLs do JSON-LD
 - [ ] **Google:** depois de publicado, adicionar o link do site no Perfil da Empresa (Perfil → Editar perfil → Contato → Site)
+
+## Créditos
+- Ícones: Phosphor Icons (licença MIT)
+- Fotos ilustrativas: Unsplash (Unsplash License)
+- Site desenvolvido por Life Creative — https://lifecreative.com.br/
 
 ## Dados usados
 - Endereço: R. 20 de Setembro, 167 - Centro, Ijuí - RS, 98700-000
