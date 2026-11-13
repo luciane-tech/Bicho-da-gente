@@ -2,7 +2,7 @@
 
 Projeto de portfólio da **[Life Creative](https://lifecreative.com.br/)**: um site de página única para clínica veterinária, pet shop e banho e tosa, focado em transformar visitas em agendamentos pelo WhatsApp.
 
-> **Marca, endereço, telefones, profissionais e depoimentos são fictícios.**
+> **Marca, endereço, telefones, profissionais e depoimentos são fictícios.** Os números exibidos — WhatsApp (51) 99999-1234, telefone (51) 3333-1234 e plantão (51) 98888-1234 — são apenas ilustrativos e não fazem ligação: em `js/main.js` a constante `WHATSAPP` fica vazia de propósito.
 > Os botões de WhatsApp, telefone, Instagram e Google mostram um aviso explicando o que fariam no site real.
 
 **Ver online:** https://luciane-tech.github.io/Bicho-da-gente/
