@@ -23,7 +23,7 @@ Todos os pontos a ajustar estão marcados com `<!-- EDITAR -->` no HTML.
 - [ ] **Plantão:** confirmar o número (55) 99118-5665 (tirado de um post do Instagram)
 - [ ] **Instagram:** salvar as melhores fotos do @bichosdagenteijui (com autorização) em `assets/img/`
 - [ ] **Mapa:** opcional — trocar a ilustração `mapa.svg` por um print real do Google Maps (`mapa.jpg`)
-- [ ] **Domínio:** ajustar `canonical` e URLs do JSON-LD
+- [ ] **Domínio:** hoje o site está em https://luciane-tech.github.io/Bicho-da-gente/ (demonstração). Ao virar oficial: trocar `canonical`, `og:url`, `og:image` e URLs do JSON-LD, e **remover a meta `robots noindex`**
 - [ ] **Google:** depois de publicado, adicionar o link do site no Perfil da Empresa (Perfil → Editar perfil → Contato → Site)
 
 ## Créditos
