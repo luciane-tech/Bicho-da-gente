@@ -1,14 +1,42 @@
 // =========================================================
-// Bichos da Gente — scripts do site
-// Número do WhatsApp em UM lugar só: altere aqui se mudar.
+// Pata Verde — Projeto conceito Life Creative (marca fictícia)
+// Em um site real, coloque aqui o WhatsApp da clínica (só números, com DDI e DDD)
+// e os botões passam a abrir a conversa com a mensagem pronta.
 // =========================================================
-const WHATSAPP = "5555991787275";
+const WHATSAPP = ""; // ex.: "5511999999999"
 
-// Monta os links de WhatsApp com mensagem pronta (atributo data-wa)
+// Aviso flutuante (usado no modo demonstração)
+const toastEl = document.getElementById("toast");
+let toastTimer;
+function showToast(text) {
+  if (!toastEl) return;
+  toastEl.textContent = text;
+  toastEl.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.remove("show"), 4200);
+}
+
+// Botões de WhatsApp com mensagem pronta (atributo data-wa)
 document.querySelectorAll("[data-wa]").forEach((el) => {
   const msg = el.getAttribute("data-wa") || "Olá! Vim pelo site.";
-  el.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+  if (WHATSAPP) {
+    el.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+  } else {
+    el.removeAttribute("target");
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      showToast(`Demonstração: aqui abriria o WhatsApp da clínica com a mensagem “${msg}”`);
+    });
+  }
 });
+
+// Links de demonstração (telefone, Instagram, Google, mapa)
+document.querySelectorAll("[data-demo]").forEach((el) =>
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    showToast(el.getAttribute("data-demo"));
+  })
+);
 
 // Menu mobile
 const toggle = document.getElementById("navToggle");
@@ -28,8 +56,7 @@ if (toggle && nav) {
 }
 
 // Destaca o dia de hoje na tabela de horários
-const today = new Date().getDay();
-const row = document.querySelector(`#hoursTable tr[data-day="${today}"]`);
+const row = document.querySelector(`#hoursTable tr[data-day="${new Date().getDay()}"]`);
 if (row) row.classList.add("today");
 
 // Ano no rodapé

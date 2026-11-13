@@ -1,38 +1,38 @@
-# Site — Bichos da Gente (Clínica Veterinária · Ijuí/RS)
+# Pata Verde — site para clínica veterinária (projeto conceito)
 
-Site estático (HTML + CSS + JS), sem dependências. Abra `index.html` no navegador ou publique em qualquer hospedagem (Hostinger, Netlify, GitHub Pages, Vercel).
+Projeto de portfólio da **[Life Creative](https://lifecreative.com.br/)**: um site de página única para clínica veterinária, pet shop e banho e tosa, focado em transformar visitas em agendamentos pelo WhatsApp.
+
+> **Marca, endereço, telefones, profissionais e depoimentos são fictícios.**
+> Os botões de WhatsApp, telefone, Instagram e Google mostram um aviso explicando o que fariam no site real.
+
+**Ver online:** https://luciane-tech.github.io/Bicho-da-gente/
+
+## O que o site entrega
+- WhatsApp com **mensagem pronta por serviço** (topo, cada serviço, contato, rodapé e botão flutuante)
+- **Plantão em destaque**, com ligação em um toque
+- 7 serviços: clínica, plantão, cirurgias, banho e tosa, hospedagem, busca e entrega, pet shop
+- Horários com **o dia de hoje destacado automaticamente**
+- Mapa clicável que abre o Google Maps
+- Avaliações de clientes e botão para avaliar no Google
+- Responsável técnico e CRMV visíveis (confiança)
+- 100% adaptado ao celular, leve e sem dependências
 
 ## Estrutura
-- `index.html` — página única (Serviços, Plantão, Sobre, Fotos, Avaliações, Horários, Contato)
-- `css/style.css` — visual (cores da marca: verde-água + laranja)
-- `js/main.js` — links de WhatsApp com mensagem pronta, menu mobile, destaque do dia de hoje nos horários
-- `assets/img/` — fotos e logo
+- `index.html` — página única
+- `css/style.css` — visual (verde-água `#2F9C8A` + laranja `#E8743B`)
+- `js/main.js` — WhatsApp com mensagem pronta, avisos de demonstração, menu mobile, destaque do dia
+- `assets/img/` — imagens
+- `preview-site.html` — versão em arquivo único (abre direto no navegador)
 
-Todos os pontos a ajustar estão marcados com `<!-- EDITAR -->` no HTML.
-
-## Checklist antes de publicar
-- [ ] **Avaliações:** copiar 3 depoimentos reais do Google (com autorização) para a seção `#avaliacoes`
-- [ ] **Fotos:** hoje o site usa fotos ilustrativas do Unsplash (licença gratuita para uso comercial) + 2 fotos do Perfil do Google (`foto-3.jpg` pet shop, `foto-5.jpg` gatinho). Para versão final, trocar por fotos reais mantendo os mesmos nomes em `assets/img/`:
-  - `hero.jpg` — banner (cachorro e gato com fundo #2F9C8A). Confirmar direito de uso da imagem enviada
-  - `veterinario.jpg` — veterinária com filhote de golden (imagem enviada pela Life Creative; confirmar direito de uso)
-  - `foto-1.jpg` a `foto-6.jpg` — galeria
-  - `og-image.jpg` — 1200×630, gerada a partir do banner
-- [ ] **Logo oficial:** substituir `assets/img/logo.svg` (hoje é uma pata provisória)
-- [ ] **CRMV:** nome e número do(a) responsável técnico(a) (hero, “Sobre” e rodapé) — somente após confirmação
-- [ ] **Horários:** confirmar abertura, sábado e domingo (o Google informa só “fecha 18h15”). Atualizar também o bloco JSON-LD no `<head>`
-- [ ] **Plantão:** confirmar o número (55) 99118-5665 (tirado de um post do Instagram)
-- [ ] **Instagram:** salvar as melhores fotos do @bichosdagenteijui (com autorização) em `assets/img/`
-- [ ] **Mapa:** opcional — trocar a ilustração `mapa.svg` por um print real do Google Maps (`mapa.jpg`)
-- [ ] **Domínio:** hoje o site está em https://luciane-tech.github.io/Bicho-da-gente/ (demonstração). Ao virar oficial: trocar `canonical`, `og:url`, `og:image` e URLs do JSON-LD, e **remover a meta `robots noindex`**
-- [ ] **Google:** depois de publicado, adicionar o link do site no Perfil da Empresa (Perfil → Editar perfil → Contato → Site)
+## Como adaptar para um cliente real
+1. Em `js/main.js`, preencha `WHATSAPP` com o número da clínica (ex.: `5511999999999`)
+2. Troque nome, endereço, telefones, horários, CRMV e depoimentos reais no `index.html`
+3. Troque os links `data-demo` por links reais (`tel:`, Instagram, Perfil do Google, Google Maps)
+4. Substitua as fotos em `assets/img/` mantendo os nomes
+5. Remova a faixa `demo-bar`, a meta `robots noindex` e ajuste `canonical`/`og:url` para o domínio
+6. Adicione dados estruturados (JSON-LD `VeterinaryCare`) com os dados reais para SEO local
 
 ## Créditos
-- Ícones: Phosphor Icons (licença MIT)
-- Fotos ilustrativas: Unsplash (Unsplash License)
-- Site desenvolvido por Life Creative — https://lifecreative.com.br/
-
-## Dados usados
-- Endereço: R. 20 de Setembro, 167 - Centro, Ijuí - RS, 98700-000
-- WhatsApp/telefone: (55) 99178-7275 — alterar em `js/main.js` (`WHATSAPP`) se mudar
-- Instagram: https://www.instagram.com/bichosdagenteijui
-- Google: https://share.google/rm68JklPEhJQ6bpwt
+- Ícones: [Phosphor Icons](https://phosphoricons.com/) (licença MIT)
+- Fotos ilustrativas: [Unsplash](https://unsplash.com/) (Unsplash License); banner e foto da seção "Sobre" fornecidos pela Life Creative
+- Design e desenvolvimento: [Life Creative](https://lifecreative.com.br/)

@@ -1,6 +1,6 @@
 /* =========================================================
-   Bichos da Gente — Clínica Veterinária (Ijuí - RS)
-   Paleta baseada na identidade visual do Instagram
+   Pata Verde — Clínica Veterinária (projeto conceito Life Creative)
+   Paleta: verde-água #2F9C8A + laranja #E8743B
    ========================================================= */
 :root {
   --teal: #2f9c8a;
@@ -287,3 +287,16 @@ p { margin: 0 0 1em; }
 .hours__note .ico { color: var(--orange); }
 .map__btn { display: inline-flex; align-items: center; gap: .35em; }
 .map__btn .ico { color: var(--orange); }
+
+/* ---------- Projeto conceito ---------- */
+.logo__text span { color: var(--teal); }
+.logo--light .logo__text span { color: #9fd8cc; }
+.demo-bar { background: #17302c; color: #c9dbd7; text-align: center; font-size: .85rem; padding: 8px 16px; line-height: 1.4; }
+.demo-bar a { color: #fff; font-weight: 700; }
+.toast {
+  position: fixed; left: 50%; bottom: 96px; transform: translate(-50%, 20px); z-index: 70;
+  width: min(92vw, 520px); background: #17302c; color: #fff; padding: 14px 18px; border-radius: 14px;
+  font-size: .95rem; font-weight: 600; box-shadow: 0 12px 30px rgba(0,0,0,.25);
+  opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
